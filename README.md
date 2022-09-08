@@ -22,7 +22,7 @@ While making this SPA, I implemented function that picks the numbers based on th
 ![lotteryRate](https://user-images.githubusercontent.com/83178592/189126515-8a6e799b-d5a7-466b-869c-3632465ba79e.gif)
 <br>
 <br>
-When I implemented the fuction above, I refered to the lottery statics site below
+When I implemented the fuction, I refered to the lottery statics site above.
 <br>
 <br>
 
