@@ -22,7 +22,7 @@ And, I used @keyframes, transform: rotate() and giving animation effects like be
 <hr>
 <br>
 
-```
+```CSS
 ...
 
 .trainer .trainerIntroBox .trainer {
