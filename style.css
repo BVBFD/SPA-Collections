@@ -1,369 +1,1051 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  transition: 0.2s;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
 }
 
 html {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-  border: 5px solid #f7e8ec;
-  width: 60%;
+html::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-track {
+  background: #000;
 }
 
 section {
-  background: linen;
-  z-index: -2;
-  padding: 0 3rem;
-}
-
-header {
-  background: linen;
-  padding-top: 3rem;
   position: relative;
+  width: 100%;
+  background: #000;
+  color: #fff;
 }
-
-header div {
+/* Header Part Start */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  background: #000;
+  padding: 0.4rem 0.5rem;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  z-index: 99;
+  /* mix-blend-mode: screen; */
+}
+
+.header .logo {
+  font-weight: 800;
+}
+
+.header .menuIcon .fa-bars {
+  display: inline-block;
+}
+
+.header .menuIcon .fa-times {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 17rem;
+  height: 100%;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  background: #fff;
+  z-index: 999;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 }
 
-header div h3 {
+.menu ul li {
+  padding-top: 0.5rem;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #111;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+}
+
+.menu.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menuIcon.active {
   position: relative;
-  font-size: 5rem;
-  z-index: 1;
+  right: 17rem;
 }
 
-header div h3::before {
+.menuIcon.active {
+  z-index: 999;
+}
+
+.menuIcon.active .fa-bars {
+  display: none;
+}
+
+.menuIcon.active .fa-times {
+  display: flex;
+}
+/* Header Part End */
+/* Home Part Start */
+.home {
+  min-height: 100vh;
+}
+
+.home video {
   position: absolute;
-  content: 'LOTTO';
-  bottom: -0.4rem;
-  right: -0.4rem;
-  color: #fbd9e2;
-  opacity: 0.6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #00f7ff, #d632ff);
+  mix-blend-mode: overlay;
+}
+
+.home .text {
+  position: absolute;
+  top: 15rem;
+  left: 5rem;
+  color: #fff;
+  z-index: 10;
+  mix-blend-mode: difference;
+}
+
+.home .text h2 {
+  font-size: 6em;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.home .text h3 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.home .text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+}
+
+.home .text p {
+  position: relative;
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+/* Home Part End */
+/* About Part Start */
+.about div {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 70%;
+}
+
+.about div .background1 {
+  display: flex;
+  flex: 1 1 60%;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.about div .background2 {
+  display: flex;
+  flex: 1 1 40%;
+  background: #000;
+  min-height: 100vh;
+}
+
+.about .explainBox {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #000, #999);
+  width: 90%;
+  box-shadow: -3px 5px 10px #888;
+}
+
+.about .explainBox .textBox {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+  padding: 6rem;
+}
+
+.about .explainBox .textBox .heading {
+  position: relative;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.about .explainBox .textBox h3 {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about .explainBox .textBox p {
+  font-size: medium;
+}
+
+.about .explainBox .textBox .heading::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  height: 4px;
+  width: 99%;
+  background: #f00;
+}
+
+.about .explainBox .imgBox {
+  flex: 1 1 50%;
+}
+
+.about .explainBox .imgBox img {
+  width: 100%;
+}
+
+.about .explainBox a {
+  display: inline-block;
+  width: fit-content;
+  font-size: 1rem;
+  background: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 2rem;
+  color: #111;
+  letter-spacing: 2px;
+}
+/* About Part End */
+/* Training Part Start */
+.training {
+  padding: 0 1rem;
+}
+
+.training .heading {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+}
+
+.training .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 3rem;
+  left: 33%;
+  height: 4px;
+  width: 33%;
+  background: #f00;
+}
+
+.training .heading h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.training .trainingIntroBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 1rem;
+  height: 80vh;
+}
+
+.training .trainingIntroBox .trainingIntroBoxDiv {
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  box-shadow: -3px 5px 10px #fff;
+}
+
+.training .trainingIntroBox .trainingIntroBoxDiv::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #222, #777);
+  mix-blend-mode: overlay;
+}
+
+.training .trainingIntroBox .trainingIntroBoxDiv:nth-child(1) {
+  background: url(./images/about_pic2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+}
+
+.training .trainingIntroBox .trainingIntroBoxDiv:nth-child(2) {
+  background: url(./images/training2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+}
+
+.training .trainingIntroBox .trainingIntroBoxDiv:nth-child(3) {
+  background: url(./images/training3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+}
+
+.training .trainingIntroBox .trainingIntroBoxDiv:nth-child(4) {
+  background: url(./images/training4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+}
+
+.training .trainingIntroBox .trainingIntroBoxDiv .trainingIntroBoxDiv_explain {
+  width: 80%;
+}
+
+.training
+  .trainingIntroBox
+  .trainingIntroBoxDiv
+  .trainingIntroBoxDiv_explain
+  h3 {
+  margin-top: 1rem;
+}
+.training
+  .trainingIntroBox
+  .trainingIntroBoxDiv
+  .trainingIntroBoxDiv_explain
+  p {
+  margin-top: 1rem;
+}
+/* Training Part End */
+/* Trainer Part Start */
+.trainer {
+  padding: 0 1rem;
+}
+
+.trainer .heading {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+}
+
+.trainer .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 3rem;
+  left: 33%;
+  height: 4px;
+  width: 33%;
+  background: #f00;
+}
+
+.trainer .heading h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.trainer .trainerIntroBox {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 0 1rem;
+}
+
+.trainer .trainerIntroBox .trainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  height: 95%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.trainer .trainerIntroBox .trainer::before {
+  position: absolute;
+  top: -55%;
+  left: 40%;
+  content: "";
+  width: 30%;
+  height: 220%;
+  background: linear-gradient(#21ffff, #ff11ff);
+  animation: animate 4s linear infinite;
+  z-index: -2;
+}
+
+.trainer .trainerIntroBox .trainer::after {
+  content: "";
+  position: absolute;
+  background: #222;
+  inset: 4px;
   z-index: -1;
 }
 
-header div h4 {
-  align-self: flex-end;
-  padding-bottom: 1rem;
+.trainer .trainerIntroBox .trainer:nth-child(2)::before {
+  background: linear-gradient(#ff2525, #1f1fd6);
 }
 
-header div img {
-  width: 5rem;
-  height: 5rem;
-  margin-right: 2rem;
+.trainer .trainerIntroBox .trainer:nth-child(3)::before {
+  background: linear-gradient(#6200ff, #ff0040);
 }
 
-header div img:nth-child(4) {
-  width: 8rem;
-  height: 8rem;
-  margin-left: 2rem;
+.trainer .trainerIntroBox .trainer:nth-child(4)::before {
+  background: linear-gradient(#fffb00, #ff5e00);
 }
 
-header div:nth-child(2) {
-  display: flex;
-  flex-direction: column;
+.trainer .trainerIntroBox .trainer:nth-child(5)::before {
+  background: linear-gradient(#00ffea, #ff0404);
 }
 
-header div:nth-child(2) p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
+.trainer .trainerIntroBox .trainer:nth-child(6)::before {
+  background: linear-gradient(#21ffff, #ff11ff);
 }
 
-header .playBtn {
-  position: absolute;
-  bottom: 0;
-  right: 2.5rem;
-  padding: 0.5rem;
-  background: lightcoral;
-  border: 2px solid #fadfe6;
-  color: white;
-  font-weight: normal;
-  cursor: pointer;
-  z-index: 9999;
-}
-
-header .playBtn:active {
-  transform: scale(0.8);
-  font-size: 90%;
-}
-
-.numbox {
-  padding: 2rem 0 0.5rem 0;
-}
-
-.numbox .numboxBorder {
-  height: 1px;
-  width: 100%;
-  border: 1px dashed black;
-}
-
-.numbox .numboxRow {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem 0;
-  align-items: flex-start;
-}
-
-.numbox .numboxRow span {
-  font-size: 1.4rem;
-  font-weight: bolder;
-  position: relative;
-}
-
-.numbox .numboxRow span div:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  background: #666;
-  color: white;
-  transform: translateY(0) rotateX(0);
-  transform-origin: bottom;
-}
-
-.numbox .numboxRow span div:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  background: white;
-  transform: translateY(100%) rotateX(90deg);
-  transform-origin: top;
-}
-
-.numbox .numboxRow span div:nth-child(1).active {
-  transform: translateY(0) rotateX(0);
-  animation: animate1 0.2s linear forwards;
-}
-
-.numbox .numboxRow span div:nth-child(2).active {
-  transform: translateY(100%) rotateX(90deg);
-  animation: animate2 0.2s linear forwards;
-}
-
-@keyframes animate1 {
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
   100% {
-    transform: translateY(-100%) rotateX(90deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes animate2 {
-  100% {
-    transform: translateY(0) rotateX(0);
-  }
-}
-
-/* .numbox .numboxRow span:hover div:nth-child(1) {
-  transform: translateY(-100%) rotateX(90deg);
-}
-
-.numbox .numboxRow span:hover div:nth-child(2) {
-  transform: translateY(0) rotateX(0);
-} */
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-  text-align: center;
-  padding: 1rem 0;
-  padding-bottom: 2rem;
-}
-
-.footer .price {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 0.2rem;
-}
-
-.footer .price span {
-  font-size: 1.5rem;
-  font-weight: bolder;
-}
-
-.footer .footerNum {
-  font-size: 1.3rem;
-  font-weight: bolder;
-}
-
-.footer .qrImgBox {
-  padding: 0.5rem 0;
-  border: 1px solid linen;
-}
-
-.footer .qrImgBox img {
-  width: 80%;
+.trainer .trainerIntroBox .trainer .imgBox img {
+  width: 6rem;
   height: 6rem;
+  border-radius: 50%;
 }
 
-@media screen and (max-width: 760px) {
-  body {
-    max-width: 100vw;
+.trainer .trainerIntroBox .trainer .textBox {
+  color: #fff;
+  text-align: center;
+}
+
+.trainer .trainerIntroBox .trainer .textBox h1 {
+  line-height: 3rem;
+}
+
+.trainer .trainerIntroBox .trainer .textBox h3 {
+  line-height: 2rem;
+}
+
+.trainer .trainerIntroBox .trainer .textBox p {
+  line-height: 1.5rem;
+}
+/* Trainer Part End */
+
+/* Contact Part Start */
+.contact {
+  padding: 0 1rem;
+}
+
+.contact .heading {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+}
+
+.contact .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 33%;
+  height: 4px;
+  width: 33%;
+  background: #f00;
+}
+
+.contact .heading h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.contact .row {
+  display: flex;
+  background: var(--black);
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  text-align: center;
+}
+
+.contact .row form h3 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--black);
+  border: var(--border);
+}
+
+.contact .row form .inputBox span {
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.contact .row form .inputBox input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+
+.contact .row form input {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+}
+/* Contact Part End */
+
+@media screen and (max-width: 1280px) {
+  .contact .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .text {
+    width: 100vw;
+    font-size: 140%;
+    top: 40%;
+    left: 0;
+    padding: 2rem;
+  }
+
+  .home .text p {
+    max-width: none;
+  }
+
+  .about .explainBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .explainBox .textBox {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .explainBox .imgBox {
+    display: flex;
+  }
+
+  .training .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .training .heading::before {
+    bottom: 4rem;
+    width: 50%;
+    left: 25%;
+  }
+
+  .training .heading h1 {
+    font-size: 4rem;
+  }
+
+  .training .trainingIntroBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .training .trainingIntroBox .trainingIntroBoxDiv_explain {
+    font-size: 200%;
+  }
+
+  .training
+    .trainingIntroBox
+    .trainingIntroBoxDiv
+    .trainingIntroBoxDiv_explain
+    h3 {
+    margin-top: 0;
+    display: none;
+  }
+
+  .training
+    .trainingIntroBox
+    .trainingIntroBoxDiv
+    .trainingIntroBoxDiv_explain
+    p {
+    margin-top: 0;
+    display: none;
+  }
+
+  .trainer .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .trainer .heading::before {
+    bottom: 4rem;
+    width: 50%;
+    left: 25%;
+  }
+
+  .trainer .heading h1 {
+    font-size: 4rem;
+  }
+
+  .trainer .trainerIntroBox {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  .trainer .trainerIntroBox .trainer {
+    margin-bottom: 1rem;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox h3 {
+    font-size: 1.5rem;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox p {
+    display: none;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox p {
+    display: none;
+  }
+
+  .trainer .trainerIntroBox .trainer .imgBox img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .contact {
+    min-height: fit-content;
+    padding-bottom: 5rem;
+  }
+
+  .contact .row {
+    flex-wrap: nowrap;
+  }
+
+  .contact .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .heading::before {
+    bottom: 2rem;
+    width: 40%;
+    left: 30%;
+  }
+
+  .contact .heading h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trainer .trainerIntroBox .trainer .imgBox img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    min-height: 110vh;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .text {
+    font-size: 60%;
+    top: 30%;
+    left: 0;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+  }
+
+  .about .explainBox {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .about div {
+    flex-direction: column;
+  }
+
+  .about div .background1 {
+    display: none;
+  }
+
+  .about div .background2 {
+    display: none;
+  }
+
+  .about .explainBox {
+    top: 5%;
+    left: 5%;
+    text-align: center;
+  }
+
+  .about .explainBox .textBox {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .explainBox .imgBox {
+    display: none;
+  }
+
+  .training .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .training .heading::before {
+    bottom: 1rem;
+    width: 100%;
+    left: 0;
+  }
+
+  .training .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .training .trainingIntroBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .training .trainingIntroBox .trainingIntroBoxDiv_explain {
+    font-size: 100%;
+  }
+
+  .training
+    .trainingIntroBox
+    .trainingIntroBoxDiv
+    .trainingIntroBoxDiv_explain
+    h3 {
+    margin-top: 0;
+    display: none;
+  }
+
+  .training
+    .trainingIntroBox
+    .trainingIntroBoxDiv
+    .trainingIntroBoxDiv_explain
+    p {
+    margin-top: 0;
+    display: none;
+  }
+
+  .trainer .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .trainer .heading::before {
+    bottom: 1rem;
+    width: 100%;
+    left: 0;
+  }
+
+  .trainer .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .trainer .trainerIntroBox {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox h3 {
+    font-size: 1.2rem;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox p {
+    display: none;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox p {
+    display: none;
+  }
+
+  .trainer .trainerIntroBox .trainer .imgBox img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .contact .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .heading::before {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+
+  .contact .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact .row form {
+    flex: 1 1 45rem;
+  }
+
+  .contact .row form h3 {
+    font-size: 2.5rem;
+  }
+
+  .contact .row form .inputBox {
+    margin: 1rem 0;
+  }
+  .contact .row {
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .contact .row iframe {
     width: 100%;
   }
+}
 
-  header div:nth-child(2) p {
-    margin-top: 1rem;
-    font-size: 1rem;
+@media screen and (max-width: 768px) {
+  section {
+    min-height: 105vh;
   }
 
-  .header {
-    padding: 2.2rem;
+  .home .text {
+    font-size: 100%;
+    top: 30%;
+    left: 0;
   }
 
-  .numbox .numboxRow h3 {
-    font-size: 1rem;
+  .about {
+    min-height: 50vh;
   }
 
-  .numbox .numboxRow span {
-    font-size: 1.2rem;
-    margin: 0;
+  .menu.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
-  header div h3 {
+  .menuIcon.active {
+    right: 0;
+  }
+
+  .menu {
+    position: absolute;
+    top: 3.2rem;
+    right: none;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+
+  .menu ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul li a {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .contact .row iframe {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about {
+    min-height: 60vh;
+  }
+
+  .home .text {
+    font-size: 60%;
+    top: 30%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  section {
+    min-height: 100vh;
+  }
+
+  .about .explainBox .textBox .heading,
+  .about .explainBox .textBox h3,
+  .about .explainBox .textBox p,
+  .about .explainBox .textBox a {
+    font-size: 90%;
+  }
+
+  .training .heading {
+    height: 15vh;
+  }
+
+  .trainer .heading {
+    height: 15vh;
+  }
+
+  .contact .heading {
+    height: 10vh;
+  }
+
+  .training .heading h1 {
     font-size: 2rem;
   }
 
-  header div img {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
+  .trainer .heading h1 {
+    font-size: 2rem;
   }
 
-  header div img:nth-child(4) {
-    width: 3rem;
-    height: 3rem;
+  .trainer .heading::before {
+    bottom: 1rem;
   }
 
-  header .playBtn {
-    right: 0;
-    bottom: -2rem;
-    padding: 0.2rem;
+  .contact .heading h1 {
+    font-size: 2rem;
   }
 
-  .footer .price span {
-    font-size: 1rem;
+  .contact .row {
+    margin: 1rem 0;
   }
 
-  .footer .footerNum {
-    font-size: 0.8rem;
+  .contact .row form h3 {
+    font-size: 2rem;
   }
 
-  .footer .qrImgBox img {
-    width: 80%;
-    height: 3rem;
-  }
-}
-
-@media screen and (max-height: 1024px) and (max-width: 768px) {
-  header div h3 {
-    font-size: 3rem;
-  }
-
-  header div img {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  header div img:nth-child(4) {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  header .playBtn {
-    right: 0;
-    bottom: -2rem;
-    padding: 0.2rem;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  body {
-    max-width: 100vw;
+  .contact .row iframe {
     width: 100%;
-  }
-
-  header {
-    padding: 1rem;
-  }
-
-  header div:nth-child(2) p {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-  }
-
-  .numbox .numboxRow h3 {
-    font-size: 1rem;
-  }
-
-  .numbox .numboxRow span {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-
-  header div h3 {
-    font-size: 1.8rem;
-  }
-
-  .footer .price span {
-    font-size: 1rem;
-  }
-
-  .footer .footerNum {
-    font-size: 0.8rem;
-  }
-
-  .numbox .numboxRow span div:nth-child(1) {
-    width: 1.5rem;
-    line-height: 1.5rem;
-  }
-  .numbox .numboxRow span div:nth-child(2) {
-    width: 1.5rem;
-    line-height: 1.5rem;
   }
 }
 
 @media screen and (max-width: 320px) {
-  body {
-    width: 100%;
-  }
-
-  header div:nth-child(2) p {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-  }
-
-  header {
-    padding: 0;
-  }
-
-  .numbox .numboxRow span div:nth-child(1) {
-    width: 1.3rem;
-    line-height: 1.3rem;
-  }
-  .numbox .numboxRow span div:nth-child(2) {
-    width: 1.3rem;
-    line-height: 1.3rem;
+  .home .text {
+    font-size: 60%;
+    top: 20%;
+    left: 0;
   }
 }

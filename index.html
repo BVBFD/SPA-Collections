@@ -4,187 +4,286 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lottery-Project</title>
+    <title>Responsive Gym Web Design using video</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script2.js" defer></script>
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
-    <header>
+    <!-- Header Part Start -->
+    <header class="header">
+      <div class="logo">Boxing Club</div>
+      <div class="menuIcon" onclick="menuToggleBtnClick();">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </div>
+    </header>
+    <!-- Menu sidebar start -->
+    <div class="menu">
+      <ul>
+        <li onclick="menuToggleBtnClick();">
+          <a href="#home">Home</a>
+        </li>
+        <li onclick="menuToggleBtnClick();">
+          <a href="#about">About</a>
+        </li>
+        <li onclick="menuToggleBtnClick();">
+          <a href="#training">Training</a>
+        </li>
+        <li onclick="menuToggleBtnClick();">
+          <a href="#trainer">Trainer</a>
+        </li>
+        <li onclick="menuToggleBtnClick();">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Menu sidebar end -->
+    <!-- Header Part End -->
+    <!-- Home Part Start -->
+    <section class="home" id="home">
+      <video src="./videos/bgVideo.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>Be Stronger</h2>
+        <h3>Never give up</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut
+          magnam, numquam corporis ea aliquid dolores facilis iste, dicta
+          nostrum itaque veniam? Est, laudantium quae inventore numquam velit
+          nobis porro.
+        </p>
+        <a href="#">Join us</a>
+      </div>
+    </section>
+    <!-- Home Part End-->
+    <!-- About Part Start -->
+    <section class="about" id="about">
       <div>
-        <div class="imgLogo">
-          <img src="logo.png" alt="" />
-          <h3>LOTTO</h3>
-          <h4>00/00</h4>
-          <img src="QRCode.png" alt="" />
+        <div class="background1"></div>
+        <div class="background2"></div>
+      </div>
+      <div class="explainBox">
+        <div class="textBox">
+          <header class="heading">
+            <h1>About <span>Us</span></h1>
+          </header>
+          <h3>Best Physical Fitness Boxing Center</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+            debitis sunt, repellat atque quod animi doloremque odio provident!
+            Dolorem dolor vel enim illo illum cupiditate animi iste. Eaque,
+            quibusdam dolor.
+          </p>
+          <a href="#">More About</a>
+        </div>
+        <div class="imgBox">
+          <img src="images/about_pic3.jpg" />
         </div>
       </div>
-      <div>
-        <h1>제 0000 회</h1>
-
-        <p>발행일 : 0000 / 00 / 00 (토) 18:20:10</p>
-        <p>추첨일 : 0000 / 00 / 00 (토) HR :20987</p>
-        <p>0000 0000 0000 0000 0000 0000</p>
-        <p>12345678ABCDE 0000000/000000</p>
-      </div>
-      <button class="playBtn">숫자뽑기</button>
-    </header>
-    <section class="numbox">
-      <div class="numboxBorder"></div>
-      <div class="numboxRow">
-        <span>A</span>
-        <h3>통 계</h3>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-      </div>
-
-      <div class="numboxRow">
-        <span>B</span>
-        <h3>통 계</h3>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-      </div>
-
-      <div class="numboxRow">
-        <span>C</span>
-        <h3>통 계</h3>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-      </div>
-
-      <div class="numboxRow">
-        <span>D</span>
-        <h3>통 계</h3>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-      </div>
-
-      <div class="numboxRow">
-        <span>E</span>
-        <h3>통 계</h3>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-        <span>
-          <div>??</div>
-          <div class="lotteryNum">00</div>
-        </span>
-      </div>
-      <div class="numboxBorder"></div>
     </section>
-    <section class="footer">
-      <div class="price">
-        <span>금액</span>
-        <span>5000 Won</span>
-      </div>
-      <p class="footerNum">0000 0000 0000 0000 0000 0000</p>
-      <div class="qrImgBox">
-        <img src="footerQrImg.png" alt="" />
+    <!-- About Part Start -->
+    <!-- Training Part Start -->
+    <section class="training" id="training">
+      <header class="heading">
+        <h1>Training <span>What?</span></h1>
+      </header>
+      <div class="trainingIntroBox">
+        <div class="trainingIntroBoxDiv">
+          <div class="trainingIntroBoxDiv_explain">
+            <h1>Boxing Skills</h1>
+            <h3>
+              Improve Your Practical Skills to fight against your opponents
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
+              corrupti, atque magni ratione obcaecati vel voluptate perspiciatis
+              laudantium. Magnam quia inventore expedita sed voluptate
+              architecto repellendus, possimus deserunt atque reiciendis.
+            </p>
+          </div>
+        </div>
+        <div class="trainingIntroBoxDiv">
+          <div class="trainingIntroBoxDiv_explain">
+            <h1>Boxing Skills</h1>
+            <h3>
+              Improve Your Practical Skills to fight against your opponents
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
+              corrupti, atque magni ratione obcaecati vel voluptate perspiciatis
+              laudantium. Magnam quia inventore expedita sed voluptate
+              architecto repellendus, possimus deserunt atque reiciendis.
+            </p>
+          </div>
+        </div>
+        <div class="trainingIntroBoxDiv">
+          <div class="trainingIntroBoxDiv_explain">
+            <h1>Boxing Skills</h1>
+            <h3>
+              Improve Your Practical Skills to fight against your opponents
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
+              corrupti, atque magni ratione obcaecati vel voluptate perspiciatis
+              laudantium. Magnam quia inventore expedita sed voluptate
+              architecto repellendus, possimus deserunt atque reiciendis.
+            </p>
+          </div>
+        </div>
+        <div class="trainingIntroBoxDiv">
+          <div class="trainingIntroBoxDiv_explain">
+            <h1>Boxing Skills</h1>
+            <h3>
+              Improve Your Practical Skills to fight against your opponents
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
+              corrupti, atque magni ratione obcaecati vel voluptate perspiciatis
+              laudantium. Magnam quia inventore expedita sed voluptate
+              architecto repellendus, possimus deserunt atque reiciendis.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- Training Part End -->
+    <!-- Trainer Part Start -->
+    <section class="trainer" id="trainer">
+      <header class="heading">
+        <h1>Our <span>Trainers</span></h1>
+      </header>
+      <div class="trainerIntroBox">
+        <div class="trainer">
+          <div class="imgBox">
+            <img src="./images/pic-1.png" alt="" />
+          </div>
+          <div class="textBox">
+            <h1>Mr.Lorem</h1>
+            <h3>Job Lorem</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              tenetur impedit, nam ratione natus placeat sint vero culpa
+              eligendi quos. Fugit enim minima adipisci ipsa neque tempore
+              quibusdam eius error.
+            </p>
+          </div>
+        </div>
+        <div class="trainer">
+          <div class="imgBox">
+            <img src="./images/pic-2.png" alt="" />
+          </div>
+          <div class="textBox">
+            <h1>Mr.Lorem</h1>
+            <h3>Job Lorem</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              tenetur impedit, nam ratione natus placeat sint vero culpa
+              eligendi quos. Fugit enim minima adipisci ipsa neque tempore
+              quibusdam eius error.
+            </p>
+          </div>
+        </div>
+        <div class="trainer">
+          <div class="imgBox">
+            <img src="./images/pic-3.png" alt="" />
+          </div>
+          <div class="textBox">
+            <h1>Mr.Lorem</h1>
+            <h3>Job Lorem</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              tenetur impedit, nam ratione natus placeat sint vero culpa
+              eligendi quos. Fugit enim minima adipisci ipsa neque tempore
+              quibusdam eius error.
+            </p>
+          </div>
+        </div>
+        <div class="trainer">
+          <div class="imgBox">
+            <img src="./images/pic-4.png" alt="" />
+          </div>
+          <div class="textBox">
+            <h1>Mr.Lorem</h1>
+            <h3>Job Lorem</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              tenetur impedit, nam ratione natus placeat sint vero culpa
+              eligendi quos. Fugit enim minima adipisci ipsa neque tempore
+              quibusdam eius error.
+            </p>
+          </div>
+        </div>
+        <div class="trainer">
+          <div class="imgBox">
+            <img src="./images/pic-8.png" alt="" />
+          </div>
+          <div class="textBox">
+            <h1>Mr.Lorem</h1>
+            <h3>Job Lorem</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              tenetur impedit, nam ratione natus placeat sint vero culpa
+              eligendi quos. Fugit enim minima adipisci ipsa neque tempore
+              quibusdam eius error.
+            </p>
+          </div>
+        </div>
+        <div class="trainer">
+          <div class="imgBox">
+            <img src="./images/pic-9.png" alt="" />
+          </div>
+          <div class="textBox">
+            <h1>Mr.Lorem</h1>
+            <h3>Job Lorem</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              tenetur impedit, nam ratione natus placeat sint vero culpa
+              eligendi quos. Fugit enim minima adipisci ipsa neque tempore
+              quibusdam eius error.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Trainer Part End -->
+    <!-- Contact Part Start -->
+    <section class="contact" id="contact">
+      <header class="heading">
+        <h1>Contact <span>Us</span></h1>
+      </header>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6469.121545261884!2d129.21874694672542!3d35.8352507982388!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35664e70382225f5%3A0xddcee3b6f0c789fd!2sDonggung%20Palace%20and%20Wolji%20Pond!5e0!3m2!1sen!2skr!4v1638546226368!5m2!1sen!2skr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+
+        <form action="">
+          <h3>Get In Touch</h3>
+          <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" placeholder="name" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="email" placeholder="email" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-phone"></span>
+            <input type="number" placeholder="number" />
+          </div>
+          <input type="submit" value="contact now" class="btn" />
+        </form>
+      </div>
+    </section>
+    <!-- Contact Part End -->
   </body>
 </html>
