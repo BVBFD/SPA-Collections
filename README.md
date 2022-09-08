@@ -20,7 +20,7 @@ I code this glowing text by css animation like @keyframes, filter: blur and text
 <hr>
 
 #### CSS Code
-```
+```CSS
 ...
 
 .home .heading h1 {
@@ -135,7 +135,7 @@ For examples like below.
 <br>
 <hr>
 
-```
+```JavaScript
 const playSong = () => {
   playingSong = true;
   play.innerHTML = '<i class="fa fa-pause"></i>';
