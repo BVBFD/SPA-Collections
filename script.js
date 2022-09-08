@@ -1,192 +1,117 @@
-const body = document.querySelector("body");
-const header = document.querySelector("body .header");
-const headerHeight = header.getBoundingClientRect().height;
-console.log(body, header, headerHeight);
+const btn = document.querySelector(".playBtn");
+const divBoxes = document.querySelectorAll(".numboxRow span div");
+const numboxRow = document.querySelectorAll(".lotteryNum");
+const numboxRowA = [];
+const numboxRowB = [];
+const numboxRowC = [];
+const numboxRowD = [];
+const numboxRowE = [];
 
-body.addEventListener("mousemove", (event) => {
-  if (event.clientY <= headerHeight) {
-    header.classList.add("active");
-  } else {
-    header.classList.remove("active");
+for (let i = 0; i < 30; i++) {
+  if (i < 6) {
+    numboxRowA.push(numboxRow[i]);
   }
-});
-
-// audio player part starts
-let track = document.createElement("audio");
-let play = document.querySelector("#playSong");
-let musicTitle = document.querySelector("#musicTitle");
-let musicSinger = document.querySelector("#musicSinger");
-let musicImg = document.querySelector("#musicImg");
-let durationSlider = document.querySelector("#durationSlider");
-let volume = document.querySelector("#volume");
-let volume_show = document.querySelector("#volume_show");
-let present = document.querySelector("#present");
-let total = document.querySelector("#total");
-let autoPlayBtn = document.querySelector("#autoPlay");
-
-let playingSong = false;
-let indexNum = 0;
-let autoPlay = false;
-let timer;
-let volumeTrueFalse = true;
-
-let allSong = [
-  {
-    name: "Plastic Love",
-    path: "music/타케우치 마리야 - Plastic Love.mp3",
-    img: "images/Takeuchi Mariya.jpg",
-    singer: "Takeuchi Mariya",
-  },
-  {
-    name: "Bring me to the dance night",
-    path: "music/bring me to the dance night - Anri.mp3",
-    img: "images/Anri.jpg",
-    singer: "Anri",
-  },
-  {
-    name: "gone with the sadness",
-    path: "music/gone with the sadness - anri.mp3",
-    img: "images/Anri.jpg",
-    singer: "Anri",
-  },
-  {
-    name: "Last-Summer-Whisper",
-    path: "music/Last-Summer-Whisper Anri.mp3",
-    img: "images/Anri.jpg",
-    singer: "Anri",
-  },
-  {
-    name: "Sweet Love",
-    path: "music/Sweet Love-Junko Ohashi.mp3",
-    img: "images/Junko Ohashi.jpg",
-    singer: "Junko Ohashi",
-  },
-  {
-    name: "Eat You Up",
-    path: "music/Yoko Oginome - Eat You Up (Disco Version}.mp3",
-    img: "images/Yoko Oginome.jpg",
-    singer: "Yoko Oginome",
-  },
-];
-
-const autoPlaySong = () => {
-  if (autoPlay === false) {
-    autoPlay = true;
-    autoPlayBtn.style.background = "#ff8a65";
-  } else {
-    autoPlay = false;
-    autoPlayBtn.style.background = "#798591";
+  if (i < 12 && i >= 6) {
+    numboxRowB.push(numboxRow[i]);
   }
-};
-
-const volumeOnOffBtn = () => {
-  if (volumeTrueFalse === true) {
-    volumeTrueFalse = false;
-    muteSound();
-  } else {
-    volumeTrueFalse = true;
-    resetSound();
+  if (i < 18 && i >= 12) {
+    numboxRowC.push(numboxRow[i]);
   }
-};
-
-const muteSound = () => {
-  track.volume = 0;
-  volume.value = 0;
-  volume_show.innerHTML = 0;
-};
-
-const resetSound = () => {
-  track.volume = 0.9;
-  volume.value = 90;
-  volume_show.innerHTML = 90;
-};
-
-const loadTrack = (indexNum) => {
-  track.src = allSong[indexNum].path;
-  musicImg.src = allSong[indexNum].img;
-  musicTitle.innerHTML = allSong[indexNum].name;
-  musicSinger.innerHTML = allSong[indexNum].singer;
-
-  total.innerHTML = allSong.length;
-  present.innerHTML = indexNum + 1;
-};
-
-loadTrack(indexNum);
-
-const playSong = () => {
-  playingSong = true;
-  play.innerHTML = '<i class="fa fa-pause"></i>';
-  timer = setInterval(range_slider, 1000);
-  track.play();
-};
-
-const stopSong = () => {
-  playingSong = false;
-  clearInterval(timer);
-  play.innerHTML = '<i class="fa fa-play"></i>';
-  track.pause();
-};
-
-const justPlay = () => {
-  if (playingSong === false) {
-    playSong();
-  } else {
-    stopSong();
+  if (i < 24 && i >= 18) {
+    numboxRowD.push(numboxRow[i]);
   }
-};
-
-const previousSong = () => {
-  if (indexNum > 0) {
-    indexNum -= 1;
-    loadTrack(indexNum);
-    playSong();
-  } else {
-    indexNum = allSong.length;
-    loadTrack(indexNum);
-    playSong();
+  if (i < 30 && i >= 24) {
+    numboxRowE.push(numboxRow[i]);
   }
-};
+}
 
-const nextSong = () => {
-  if (indexNum < allSong.length - 1) {
-    indexNum += 1;
-    loadTrack(indexNum);
-    playSong();
-  } else {
-    indexNum = 0;
-    loadTrack(indexNum);
-    playSong();
-  }
-};
-
-const changeDuration = () => {
-  durationSliderPosition = track.duration * (durationSlider.value / 100);
-  track.currentTime = durationSliderPosition;
-};
-
-const changeVolume = () => {
-  volume_show.innerHTML = volume.value;
-  track.volume = volume.value / 100;
-};
-
-const range_slider = () => {
-  let position = 0;
-  // update slider position
-  if (!isNaN(track.duration)) {
-    position = track.currentTime * (100 / track.duration);
-    durationSlider.value = position;
-  }
-
-  // function will run when the song is over
-  if (track.ended) {
-    play.innerHTML = '<i class="fa fa-play"></i>';
-    if (autoPlay === true) {
-      indexNum += 1;
-      loadTrack(indexNum);
-      playSong();
-    } else {
-      stopSong();
+const getLotteryNums = () => {
+  const lotteryNum = [];
+  for (let i = 0; i < 6; i++) {
+    let numRate = Math.random();
+    if (numRate < 0.218 && numRate >= 0) {
+      let value = Math.round(Math.random() * (10 - 1) + 1);
+      if (lotteryNum.includes(value) === false) {
+        lotteryNum.push(value);
+      } else {
+        i--;
+      }
+    } else if (numRate < 0.448 && numRate >= 0.218) {
+      let value = Math.round(Math.random() * (20 - 11) + 11);
+      if (lotteryNum.includes(value) === false) {
+        lotteryNum.push(value);
+      } else {
+        i--;
+      }
+    } else if (numRate < 0.661 && numRate >= 0.448) {
+      let value = Math.round(Math.random() * (30 - 21) + 21);
+      if (lotteryNum.includes(value) === false) {
+        lotteryNum.push(value);
+      } else {
+        i--;
+      }
+    } else if (numRate < 0.887 && numRate >= 0.661) {
+      let value = Math.round(Math.random() * (40 - 31) + 31);
+      if (lotteryNum.includes(value) === false) {
+        lotteryNum.push(value);
+      } else {
+        i--;
+      }
+    } else if (numRate < 1 && numRate >= 0.887) {
+      let value = Math.round(Math.random() * (45 - 41) + 41);
+      if (lotteryNum.includes(value) === false) {
+        lotteryNum.push(value);
+      } else {
+        i--;
+      }
     }
   }
+  return lotteryNum;
 };
-// audio player part end
+
+let index = false;
+
+btn.addEventListener("click", (event) => {
+  if (!index) {
+    event.target.innerText = "다시뽑기";
+    index = true;
+  } else {
+    event.target.innerText = "숫자뽑기";
+    index = false;
+  }
+
+  const rowA = getLotteryNums();
+  const rowB = getLotteryNums();
+  const rowC = getLotteryNums();
+  const rowD = getLotteryNums();
+  const rowE = getLotteryNums();
+
+  numboxRowA.forEach((box) => {
+    box.innerText = rowA.pop();
+    console.log(box);
+  });
+
+  numboxRowB.forEach((box) => {
+    box.innerText = rowB.pop();
+    console.log(box);
+  });
+
+  numboxRowC.forEach((box) => {
+    box.innerText = rowC.pop();
+    console.log(box);
+  });
+
+  numboxRowD.forEach((box) => {
+    box.innerText = rowD.pop();
+    console.log(box);
+  });
+
+  numboxRowE.forEach((box) => {
+    box.innerText = rowE.pop();
+    console.log(box);
+  });
+
+  divBoxes.forEach((box) => {
+    box.classList.toggle("active");
+  });
+});
