@@ -1,13 +1,37 @@
-# WarhammerSite
+# GameSite - Warhammer
+<br>
+This is the warhammer fantasy game website which is made by HTML, CSS, JavaScript.
+<br>
+This is my second SPA(Single Page Application).
 
-*Update Note
-  
-  *Ver 1.0.1 - 2021년 11월 17일
-   1. video 태그 fullscreen event 종료 후, 자동 scroll to the top 되던 오류 해결  
-      -> video 태그랑 body의 overflow: hidden; 이랑 충돌. body 안의 overflow: hidden; 제거 하니 오류 해결  
-      
-   2. video faction exit btn 누르면 자동 스크롤 up 되던 문제 해결  
-      -> exit 버튼 감싸고 있던 a href=#faction 수정 a href=개별비디오 아이디 로 수정
-      
-  *Ver 1.0.2 - 2022년 02월 14일
-   1. 웹사이트 videos 더 작은 사이즈로 압축 및 변환
+<br>
+<br>
+
+### Import into Video on Sigle Page Application
+<hr>
+
+![gamesite1](https://user-images.githubusercontent.com/83178592/189119629-7490b096-b174-4241-be4a-e2b7779f9b1a.gif)
+
+I try to import Video materials in this static website which is good to see and show what this game is.
+<br>
+I try my best to minimize the video size and optimize the website with video materials.
+<br>
+
+<hr>
+
+<br>
+
+### Playing Commercial Video of this Game
+<hr>
+
+![gamesite2](https://user-images.githubusercontent.com/83178592/189117737-e9309382-bd45-44aa-9cb4-2d2b05fc7763.gif)
+
+<br>
+When you click the faction images, you can see the video player. 
+<br>
+if you click to play, you can see the each faction videos on this site.
+<br>
+<br>
+
+<hr>
+<a href="https://bvbfd.github.io/WarhammerSite/">Go To Visit Portfolio-Website</a>
