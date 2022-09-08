@@ -4,285 +4,301 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WarhammerIII</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/script.js" defer></script>
+    <title>City Pop Home Page</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <!-- swiper css  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.css"
-    />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- header part start -->
+    <!-- header part starts -->
     <header class="header">
-      <a href="#" class="logo">
-        <span>total war</span>
-        <img src="images/Total-War-Logo.jpg" alt="" />
-      </a>
-      <div class="navShareBox">
-        <nav class="navbar">
-          <a id="btn" href="#home">home</a>
-          <a id="btn" href="#about">about</a>
-          <a id="btn" href="#factions">faction</a>
-          <a id="btn" href="#gallery">gallery</a>
-          <a id="btn" href="#article">article</a>
-        </nav>
-        <div class="share">
-          <a id="btn" href="" class="fab fa-facebook-f"></a>
-          <a id="btn" href="" class="fab fa-instagram"></a>
-          <a id="btn" href="" class="fab fa-github"></a>
-        </div>
-      </div>
-      <div class="fas fa-bars" id="menu-btn"></div>
-    </header>
-    <!-- header part end -->
-    <!-- home part start -->
-    <section class="about" id="home">
-      <div class="videoExplainBuyBox">
-        <video
-          class="videoCathay"
-          src="videos/키슬레프1.mp4"
-          autoplay
-          muted
-          loop
-        ></video>
-        <div class="explain">
-          <h3>total war:</h3>
-          <h4>warhammer III</h4>
-          <p>conquer your devils in your mind.</p>
-          <p>save the world</p>
-          <p>Join this battle now!!</p>
-          <a
-            href="https://store.steampowered.com/app/1142710/Total_War_WARHAMMER_III/"
-          >
-            <div class="buyBtn">buy now</div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- home part finish -->
-    <!-- about part start -->
-    <section class="about" id="about">
-      <div class="videoExplainBuyBox">
-        <h1 class="heading"><span>about </span> total war</h1>
-        <video src="videos/캐세이1.mp4" autoplay muted loop></video>
-        <div class="explain explain2">
-          <h3>total war:</h3>
-          <h4>warhammer III</h4>
-          <p>You have to battle against Realm of Chaos.</p>
-          <p>Will you survive from them?</p>
-          <p>And Conquer your own devils?</p>
-          <a
-            href="https://cafe.naver.com/ArticleList.nhn?search.clubid=28875643&search.menuid=151&search.boardtype=W"
-          >
-            <div class="buyBtn">Learn more</div>
-          </a>
-        </div>
-      </div>
-      <h1 class="heading" id="factions"><span>total war </span>faction</h1>
-    </section>
-    <!-- about part finish -->
-    <!-- faction part start -->
-    <section class="faction" id="faction">
-      <div id="#Empire" class="factionBox" data-src="/videos/캐세이1.mp4">
-        <img src="images/empire.jpg" alt="" />
-        <div class="factionTitle">The Empire</div>
-
-        <div class="btnClickVideo active">
-          <a href="#Empire"><i class="fas fa-times"></i></a>
-          <video src="videos/empire.mp4" controls></video>
-        </div>
+      <div class="logo">
+        <a href="#home">city pop</a>
       </div>
 
-      <div id="#Chaos" class="factionBox" data-src="/videos/캐세이2.mp4">
-        <img src="images/chaos.jpg" alt="" />
-        <div class="factionTitle">The Chaos</div>
-
-        <div class="btnClickVideo active">
-          <a href="#Chaos"><i class="fas fa-times"></i></a>
-          <video src="videos/chaos.mp4" controls></video>
-        </div>
-      </div>
-
-      <div id="#Cathay" class="factionBox" data-src="/videos/캐세이1.mp4">
-        <img src="images/cathay.jpg" alt="" />
-        <div class="factionTitle">The Grand Cathay</div>
-
-        <div class="btnClickVideo active">
-          <a href="#Cathay"><i class="fas fa-times"></i></a>
-          <video src="videos/cathay.mp4" controls></video>
-        </div>
-      </div>
-
-      <div id="#Slaanesh" class="factionBox" data-src="/videos/캐세이2.mp4">
-        <img src="images/slaanesh.jpg" alt="" />
-        <div class="factionTitle">The Slaanesh</div>
-
-        <div class="btnClickVideo active">
-          <a href="#Slaanesh"><i class="fas fa-times"></i></a>
-          <video src="videos/slaanesh.mp4" controls></video>
-        </div>
-      </div>
-
-      <div id="#Kislev" class="factionBox" data-src="/videos/캐세이1.mp4">
-        <img src="images/kislev.jpg" alt="" />
-        <div class="factionTitle">The Kislev</div>
-
-        <div class="btnClickVideo active">
-          <a href="#Kislev"><i class="fas fa-times"></i></a>
-          <video src="videos/kislev.mp4" controls></video>
-        </div>
-      </div>
-
-      <div id="#Nurgle" class="factionBox" data-src="/videos/캐세이2.mp4">
-        <img src="images/nurgle.jpeg" alt="" />
-        <div class="factionTitle">The Nurgle</div>
-
-        <div class="btnClickVideo active">
-          <a href="#Nurgle"><i class="fas fa-times"></i></a>
-          <video src="videos/nurgle.mp4" controls></video>
-        </div>
-      </div>
-    </section>
-    <!-- faction part finish -->
-    <!-- gallery part start -->
-    <section class="gallery" id="gallery">
-      <h1 class="heading">total war <span> gallery</span></h1>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/gallery-1.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/gallery-2.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/gallery-3.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/gallery-4.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/gallery-5.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/gallery-6.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/gallery-7.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/gallery-8.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/gallery-9.jpg" alt="" />
-          </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-    <!-- gallery part finish -->
-    <!-- article part start -->
-    <section class="article" id="article">
-      <h1 class="heading">total war <span> article</span></h1>
-
-      <div class="articleBoxesContainer">
-        <div class="articleBox">
-          <div class="articleBoxImg">
-            <img src="images/article-1.jpg" alt="" />
-          </div>
-          <div class="articleBoxContents">
-            <h1>Community</h1>
-            <p>Ready to conquer your daemons?</p>
-            <p>Sign up to Total War Access</p>
-            <p>For unique rewards</p>
-            <a href="https://warhammer3.totalwar.com/community">
-              <span class="readMoreBtn">read more</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="articleBox">
-          <div class="articleBoxImg">
-            <img src="images/article-2.jpg" alt="" />
-          </div>
-          <div class="articleBoxContents">
-            <h1>Pre-Order</h1>
-            <p>Pre-order now</p>
-            <p>And, join the cataclysmic conclusion</p>
-            <p>To the trilogy</p>
-            <a
-              href="https://store.warhammer.totalwar.com/en/games/warhammer-iii"
-            >
-              <span class="readMoreBtn">read more</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="articleBox">
-          <div class="articleBoxImg">
-            <img src="images/article-3.jpg" alt="" />
-          </div>
-          <div class="articleBoxContents">
-            <h1>Korean Fan Community</h1>
-            <p>Sign up for this website</p>
-            <p>For more about warhammer history</p>
-            <p>Share your warhammer experiences</p>
-            <a href="https://cafe.naver.com/twcenter">
-              <span class="readMoreBtn">read more</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- article part finish -->
-    <!-- footer part start -->
-    <footer class="footer">
-      <a href="#" class="logo">
-        <span>total war</span>
-        <img src="images/Total-War-Logo.jpg" alt="" />
-      </a>
-      <nav class="navbar">
-        <a id="btn" href="#home">home</a>
-        <a id="btn" href="#about">about</a>
-        <a id="btn" href="#factions">faction</a>
-        <a id="btn" href="#gallery">gallery</a>
-        <a id="btn" href="#article">article</a>
+      <nav>
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#singers">singers</a>
+        <a href="#player">player</a>
+        <a href="#contact">contact</a>
       </nav>
-      <p>Created by Mr. Lee Seong Eun || All Rights Reserved</p>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </header>
+    <!-- header part ends -->
+
+    <!-- home part starts -->
+    <section class="home" id="home">
+      <div class="heading">
+        <!-- <h1>City Pop</h1> -->
+        <span>C</span>
+        <span>i</span>
+        <span>t</span>
+        <span>y</span>
+        <span>-</span>
+        <span>P</span>
+        <span>o</span>
+        <span>p</span>
+      </div>
+    </section>
+    <!-- home part ends -->
+
+    <!-- about part starts -->
+    <section class="about" id="about">
+      <div class="heading">
+        <h3>about <span>city pop</span></h3>
+      </div>
+
+      <div class="introBox">
+        <div class="imgBox">
+          <img src="./images/aboutCityPop.jpg" alt="" />
+        </div>
+        <div class="explainBox">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            consectetur quasi quia eum esse sequi debitis alias illum laudantium
+            deleniti, ratione totam adipisci molestiae necessitatibus error.
+            Libero officiis totam quae!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- about part ends -->
+    <!-- singers part starts -->
+    <section class="singers" id="singers">
+      <div class="heading">
+        <h3>city pop <span>singers</span></h3>
+      </div>
+
+      <div class="introBox">
+        <div class="singerIntroBox">
+          <div class="singerImgBox">
+            <img src="./images/Junko Ohashi.jpg" alt="" />
+          </div>
+          <div class="singerExplainBox">
+            <h3>Junko Ohashi</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              laborum error iusto cumque beatae? Maiores asperiores nam pariatur
+              dolore neque adipisci numquam voluptates earum. Dicta illo fugit
+              tempore quas sed?
+            </p>
+          </div>
+        </div>
+
+        <div class="singerIntroBox">
+          <div class="singerImgBox">
+            <img src="./images/Anri.jpg" alt="" />
+          </div>
+          <div class="singerExplainBox">
+            <h3>Anri</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              laborum error iusto cumque beatae? Maiores asperiores nam pariatur
+              dolore neque adipisci numquam voluptates earum. Dicta illo fugit
+              tempore quas sed?
+            </p>
+          </div>
+        </div>
+
+        <div class="singerIntroBox">
+          <div class="singerImgBox">
+            <img src="./images/Takeuchi Mariya.jpg" alt="" />
+          </div>
+          <div class="singerExplainBox">
+            <h3>Takeuchi Mariya</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              laborum error iusto cumque beatae? Maiores asperiores nam pariatur
+              dolore neque adipisci numquam voluptates earum. Dicta illo fugit
+              tempore quas sed?
+            </p>
+          </div>
+        </div>
+
+        <div class="singerIntroBox">
+          <div class="singerImgBox">
+            <img src="./images/Yoko Oginome.jpg" alt="" />
+          </div>
+          <div class="singerExplainBox">
+            <h3>Yoko Oginome</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              laborum error iusto cumque beatae? Maiores asperiores nam pariatur
+              dolore neque adipisci numquam voluptates earum. Dicta illo fugit
+              tempore quas sed?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- singers part ends -->
+    <!-- player part starts -->
+    <section class="player" id="player">
+      <div class="heading">
+        <h3>player</h3>
+      </div>
+
+      <div class="musicBox">
+        <div class="picVolumeBox">
+          <div>
+            <i class="fa fa-music"></i>
+            <span>Music</span>
+          </div>
+          <div class="picBox">
+            <img id="musicImg" src="./images/Takeuchi Mariya.jpg" alt="" />
+          </div>
+          <div class="volumeBox">
+            <p id="volume_show">90</p>
+            <i
+              class="fa fa-volume-up"
+              id="volume_icon"
+              onclick="volumeOnOffBtn()"
+            ></i>
+            <input
+              onchange="changeVolume();"
+              type="range"
+              min="0"
+              max="100"
+              value="90"
+              id="volume"
+            />
+          </div>
+        </div>
+
+        <div class="titleButtonRangeBox">
+          <div class="orderBox">
+            <span id="present">1</span>
+            <span>/</span>
+            <span id="total">5</span>
+          </div>
+
+          <div class="titleSingerBox">
+            <span id="musicTitle">First Song</span>
+            <span id="musicSinger">Singer</span>
+          </div>
+
+          <div class="buttonBox">
+            <button id="previousSong" onclick="previousSong();">
+              <i class="fa fa-step-backward"></i>
+            </button>
+            <button id="playSong" onclick="justPlay();">
+              <i class="fa fa-play"></i>
+            </button>
+            <button id="nextSong" onclick="nextSong();">
+              <i class="fa fa-step-forward"></i>
+            </button>
+          </div>
+
+          <div class="autoPlayBox">
+            <button id="autoPlay" onclick="autoPlaySong();">
+              Auto play <i class="fas fa-circle-notch"></i>
+            </button>
+          </div>
+
+          <div class="duration">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              id="durationSlider"
+              onchange="changeDuration();"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- player part ends -->
+    <!-- contact part starts -->
+    <section class="contact" id="contact">
+      <div class="heading">
+        <h3>contact</h3>
+      </div>
+
+      <div class="contactBox">
+        <form action="">
+          <input type="text" placeholder="name" class="box" />
+          <input type="email" placeholder="email" class="box" />
+          <input type="number" placeholder="phone" class="box" />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="box"
+            placeholder="message"
+          ></textarea>
+          <input type="submit" value="send message" class="btn" />
+        </form>
+
+        <div class="qestionsBox">
+          <h3>do you have any questions?</h3>
+          <p class="graph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
+            iste!
+          </p>
+          <div class="icons">
+            <i class="fas fa-map"></i>
+            <div class="info">
+              <p>Gyeong Ju, South Korea</p>
+            </div>
+          </div>
+          <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <div class="info">
+              <p>lsevina126@gmail.com</p>
+              <p>dltjddms126@naver.com</p>
+            </div>
+          </div>
+          <div class="icons">
+            <i class="fas fa-phone"></i>
+            <div class="info">
+              <p>+82-10-9141-6073</p>
+              <p>+84-11-1111-1111</p>
+            </div>
+          </div>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact part ends -->
+    <!-- footer starts -->
+    <footer class="footer">
+      <div class="logo">
+        <a href="#home">city pop</a>
+      </div>
+
+      <nav>
+        <!-- <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#singers">singers</a>
+        <a href="#player">player</a>
+        <a href="#contact">contact</a> -->
+        <p>All Rights reserved by Mr.Lee Seong Eun</p>
+      </nav>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
     </footer>
-    <!-- footer part finish -->
-    <!-- swiper script contents -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script>
-    <script>
-      let swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          type: "bullets",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          1200: {
-            slidesPerView: 3,
-          },
-        },
-      });
-    </script>
+    <!-- footer ends -->
   </body>
 </html>
