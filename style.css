@@ -615,6 +615,14 @@ header .navbar ul li a:hover {
   height: 35rem;
 }
 
+.portfolio .game-container .swiper-slide-prev {
+  display: none;
+}
+
+.portfolio .game-container .swiper-slide-next {
+  display: none;
+}
+
 .portfolio .game-container .box img {
   height: 100%;
   width: 100%;
